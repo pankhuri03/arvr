@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ball : MonoBehaviour
+{
+    // Start is called before the first frame update
+public float force=100f;
+private Rigidbody2D rbody;
+    void Start()
+    {
+        rbody=GetComponent<Rigidbody2D>();
+	rbody.AddForce(new Vector2(50f, 25f)*force*Time.deltaTime);
+    }
+
+    // Update is called once per frame
+   
+}

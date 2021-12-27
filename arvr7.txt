@@ -1,0 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class light : MonoBehaviour
+{
+    public Light lit;
+    void Start()
+    {
+        lit=GetComponent<Light>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(Input.GetKeyDown("1"))
+	{
+		Color c=new Color();
+		c.r=1f;
+		c.a=1f;
+		lit.color=c;
+	}
+	if(Input.GetKeyDown("2"))
+	{
+		Color c=new Color();
+		c.g=1f;
+		c.a=1f;
+		lit.color=c;
+	}
+	if(Input.GetKeyDown("3"))
+	{
+		Color c=new Color();
+		c.b=1f;
+		c.a=1f;
+		lit.color=c;
+	}
+    }
+}
